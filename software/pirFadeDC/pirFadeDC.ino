@@ -2,6 +2,7 @@
 
 #define DEBUG
 #define OUTPUT_PIN  9   /*PWM only works on pins 3,5,6,9,10, and 11 */
+#define OTHER_PIN   10
 #define INPUT_PIN   3
 
 /* Power supply is 12v. Let's limit max voltage to 9V so PWM = 9/12= 75% duty cycle.
@@ -14,6 +15,7 @@ void setup() {
   Serial.begin(9600);  
   #endif
   pinMode(OUTPUT_PIN, OUTPUT);
+    pinMode(OTHER_PIN, OUTPUT);
   pinMode(INPUT_PIN, INPUT);
 }
 
@@ -125,3 +127,8 @@ void loop() {
   
   pinPrevious = pinNow;  
 }
+
+
+
+
+
